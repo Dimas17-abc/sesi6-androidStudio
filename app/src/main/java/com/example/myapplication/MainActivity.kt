@@ -25,7 +25,9 @@ class MainActivity : AppCompatActivity() {
         val tombol : Button = findViewById(R.id.login)
 
         tombol.setOnClickListener {
+            val text = tuser.text.toString()
             val intent = Intent(this,Home::class.java)
+            intent.putExtra("usr",text)
             startActivity(intent)
         }
     }
